@@ -1,0 +1,6 @@
+project: pdfannots
+target: annot-fuzz
+
+cmds:
+  - cmd: /src/mayhem/fuzz_pdf.py
+    libfuzzer: true
