@@ -5,7 +5,11 @@ import sys
 
 from pdfminer.pdfparser import PDFSyntaxError
 
-with atheris.instrument_imports():
+with atheris.instrument_imports(exclude=["pdfminer.pdfinterp", "pdfminer.cmapdb", "pdfminer.pdfdevice",
+                                         "pdfminer.converter", "pdfminer.layout", "pdfminer.utils", "pdfminer.encodingdb",
+                                         "pdfminer.glyphlist", "pdfminer.latin_enc", "pdfminer.pdfcolor", "pdfminer.pdffont",
+                                         "pdfminer.fontmetrics", "pdfminer.pdfpage", "pdfminer.pdfdocument", "pdfminer.arcfour",
+                                         "pdfminer.data_structures", "pdfminer.image", "pdfminer.jbig2"]):
     import pdfannots
 
 @atheris.instrument_func
